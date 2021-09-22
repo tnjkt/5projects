@@ -55,10 +55,14 @@ function pickRandomTag() {
   return tags[Math.floor(Math.random() * tags.length)];
 }
 
+const getRandom = (to) => Math.floor(Math.random() * to);
+
 function highlightTag(tag) {
-  tag.classList.add("highlight");
+  // tag.classList.add("highlight");
+  tag.style = `background: rgb(${getRandom(255)}, 255, ${getRandom(255)} )`;
 }
 
 function unHighlightTag(tag) {
-  tag.classList.remove("highlight");
+  // tag.classList.remove("highlight");
+  tag.style = "";
 }
